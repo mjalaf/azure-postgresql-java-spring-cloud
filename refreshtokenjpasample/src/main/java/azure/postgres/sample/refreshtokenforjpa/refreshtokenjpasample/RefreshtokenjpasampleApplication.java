@@ -33,14 +33,14 @@ public class RefreshtokenjpasampleApplication {
 
 			String input = "";
 			while (!input.equals("X")) {
-				System.out.println("Posgress query run at:" + java.time.LocalTime.now()  );
+				System.out.println("PostgreSQL query run at:" + java.time.LocalTime.now()  );
 				try {
 					todoRepo.findAll().forEach(todo -> { System.out.println("Records: " + todo.getId() + " - " + todo.getDescription()); });
 
 				} catch (Exception e) {
 					System.out.println("Error: " + e.getMessage());
 				}
-				System.out.println("Enter 'X' or Enter to Process the data Again to close the application.");
+				System.out.println("Type the key 'X' to stop the application or press Enter to run again the query.");
 				input = scanner.nextLine();
 			}
 				
