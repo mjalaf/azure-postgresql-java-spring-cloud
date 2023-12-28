@@ -1,5 +1,6 @@
 {
     "configurations": [
+    
         {
             "type": "java",
             "name": "Spring Boot-RefreshtokensampleApplication<refreshtokensample>",
@@ -7,6 +8,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "azure.postgres.sample.refreshtokensample.RefreshtokensampleApplication",
             "projectName": "refreshtokensample",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-JPA<refreshtokenjpasample>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "azure.postgres.sample.refreshtokenforjpa.refreshtokenjpasample.RefreshtokenjpasampleApplication",
+            "projectName": "refreshtokenjpasample",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
