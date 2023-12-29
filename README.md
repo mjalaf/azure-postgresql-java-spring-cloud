@@ -1,26 +1,35 @@
 # azure-postgresql-java-spring-cloud
 ## Project Documentation
 
-This project is a J 
+Azure PostgreSQL provides three alternatives to Authenticate 
+![image](https://github.com/mjalaf/azure-postgresql-java-spring-cloud/assets/13685129/d6fee7b2-42e3-4ff8-ae4b-e23799c62895)
 
-### Prerequisites
+When using Microsoft Entra (ex Azure AD) The following high-level diagram summarizes how authentication with Azure Database for PostgreSQL works. 
 
-Before running this application, make sure you have the following:
+![image](https://github.com/mjalaf/azure-postgresql-java-spring-cloud/assets/13685129/43363ca2-a669-49d7-894c-dc38322eb018)
 
-- Java Development Kit (JDK) installed
-- Maven build tool installed
-- Azure account with a PostgreSQL database provisioned
+[Reference](https://learn.microsoft.com/en-us/azure/postgresql/single-server/concepts-azure-ad-authentication#architecture)
 
-### Getting Started
+Azure Database for PosgressSQL Support configuered with Microsoft Entra suport
+  - Domains Users
+  - Groups
+  - Service Principal
+  - Managed Identity
 
-To get started with this project, follow these steps:
+When authenticated with a Sevice Principal (without using the passwordless flag), we have to get and Azure AD Token and this token needs to be refreshed automatically every our.
 
-1. Clone the repository to your local machine.
-2. Open the project in your preferred IDE.
-3. Configure the Azure PostgreSQL connection details in the application.properties file.
-4. Build the project using Maven.
-5. Run the application.
+Based on this post: https://www.azureblue.io/how-to-authenicated-aad-identity-against-postgres-using-spring-boot/
 
+I wrote to prototype project 
+  - refreshtokenjpnsample
+  - refreshtokensample
+
+Both projects are implemented the simpletokencache to refresh the token
+https://learn.microsoft.com/en-us/java/api/com.azure.core.credential.simpletokencache?view=azure-java-stable
+
+Another Alternative is using the Passwordless feature)
+[Connect to Azure PostgreSQL using a service principal]
+(https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity)
 
 
 ### Contributing
