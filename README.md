@@ -1,4 +1,4 @@
-# azure-postgresql-java-spring-cloud
+# Custom Refresh token implementation using Spring Boot and Azure PostgreSQL
 ## Project Documentation
 
 Azure PostgreSQL provides three alternatives to Authenticate 
